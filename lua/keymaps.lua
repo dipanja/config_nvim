@@ -32,6 +32,7 @@ keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- toggle last search
 keymap('n', '<leader>v', ':set hlsearch!<CR>', opts)
+keymap('n', '<leader>bv', ':let @/ = ""<CR>', opts)
 
 
 -- Spliting window
