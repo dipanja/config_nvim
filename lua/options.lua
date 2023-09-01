@@ -27,7 +27,8 @@ vim.cmd "set cc=80"                 -- set colorcolumn at 80.
 
 -- Searching
 vim.opt.incsearch = true            -- search as characters are entered
-vim.opt.hlsearch = true             -- highlight matches
+-- vim.opt.hlsearch = true             -- highlight matches
+vim.opt.hlsearch = false             -- highlight matches
 vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
 

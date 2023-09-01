@@ -30,6 +30,10 @@ keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
 
+-- toggle last search
+keymap('n', '<leader>v', ':set hlsearch!<CR>', opts)
+
+
 -- Spliting window
 keymap('n', '<leader>vs', ':vsplit<CR>', opts)
 keymap('n', '<leader>-', ':split<CR>', opts)
@@ -67,12 +71,12 @@ keymap('n', '<leader>x', ':bdelete<CR>', opts)
 
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>", opts)
--- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
--- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+-- keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
+-- keymap("n", "<A-k>", "<Esc>:m .-2<CR>", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
-keymap('n', '<leader>rr', ':%s///gc<left><left><left><left>', opts)
+keymap('n', '<leader>rr', ':%s///gc<left><left><left><left>', term_opts)
 -----------------
 -- Visual mode --
 -----------------
