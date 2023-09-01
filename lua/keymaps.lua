@@ -2,7 +2,7 @@
 -- define common options
 local opts = {
     noremap = true,      -- non-recursive
-    silent = false,       -- do not show message
+    silent = true,       -- do not show message
 }
 
 local term_opts = { silent =
