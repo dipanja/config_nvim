@@ -51,6 +51,11 @@ return require('packer').startup(function(use)
     use "lunarvim/colorschemes"
     use "lunarvim/darkplus.nvim" -- color schemes
 
+    -- lua line 
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
  
     -- use 'https://github.com/terryma/vim-multiple-cursors' -- CTRL + N for multiple cursors
     use 'https://github.com/vim-airline/vim-airline' -- Status bar
