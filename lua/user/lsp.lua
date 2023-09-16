@@ -11,7 +11,7 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = { 'pylsp',  'lua_ls', 'rust_analyzer' },
+    ensure_installed = { 'pylsp',  'lua_ls', 'pyright'},
 })
 
 
@@ -63,9 +63,16 @@ local on_attach = function(client, bufnr)
     )
 end
 
+-- pylsp setup
 lspconfig.pylsp.setup({
     on_attach = on_attach,
 })
+
+-- pyright setup
+lspconfig.pyright.setup({
+    on_attach = on_attach,
+})
+
 -- auto format on save
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
