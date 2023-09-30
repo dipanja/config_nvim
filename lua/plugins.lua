@@ -119,6 +119,13 @@ return require('packer').startup(function(use)
     use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
 
+    use({
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        after = "nvim-treesitter",
+        requires = "nvim-treesitter/nvim-treesitter",
+    })
+
+
     -- :TODO 
     ---------------------------------------
     -- NOTE: PUT YOUR THIRD PLUGIN HERE --
