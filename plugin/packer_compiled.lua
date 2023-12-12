@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/bappa/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/bappa/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/bappa/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/bappa/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/bappa/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/bappa/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/bappa/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/bappa/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/bappa/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/bappa/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -93,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  catppuccin = {
+    loaded = true,
+    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["cmp-buffer"] = {
     after_files = { "/home/bappa/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
@@ -166,6 +171,11 @@ _G.packer_plugins = {
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -187,7 +197,7 @@ _G.packer_plugins = {
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-buffer", "cmp-path", "cmp-cmdline", "cmp-nvim-lsp" },
+    after = { "cmp-cmdline", "cmp-nvim-lsp", "cmp-path", "cmp-buffer" },
     config = { "require('config.nvim-cmp')" },
     loaded = true,
     only_config = true,
@@ -256,6 +266,11 @@ _G.packer_plugins = {
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -290,12 +305,12 @@ require('config.nvim-cmp')
 time([[Config for nvim-cmp]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd cmp-cmdline ]]
-vim.cmd [[ packadd cmp-buffer ]]
-vim.cmd [[ packadd cmp-path ]]
-vim.cmd [[ packadd cmp-nvim-lsp ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
+vim.cmd [[ packadd cmp-path ]]
+vim.cmd [[ packadd cmp-buffer ]]
+vim.cmd [[ packadd cmp-cmdline ]]
+vim.cmd [[ packadd cmp-nvim-lsp ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false

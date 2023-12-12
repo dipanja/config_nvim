@@ -16,13 +16,14 @@ vim.opt.expandtab = true            -- tabs are spaces, mainly because of python
 -- UI config
 vim.opt.number = true               -- show absolute number
 vim.opt.relativenumber = true       -- add numbers to each line on the left side
-vim.opt.cursorline = true           -- highlight cursor lin underneath the cursor horizontally
-vim.opt.cursorcolumn = true
+-- vim.opt.cursorline = true           -- highlight cursor lin underneath the cursor horizontally
+-- vim.opt.cursorcolumn = true
 vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
 vim.opt.showmode = true             -- we are experienced, wo don't need the "-- INSERT --" mode hint
 vim.cmd "set cc=80"                 -- set colorcolumn at 80.
+-- vim.opt.background = false
 
 
 -- Searching
@@ -45,6 +46,11 @@ vim.o.foldenable = true
 
 
 
+-- vim.cmd "highlight Normal ctermbg=none guibg=none"
+-- vim.cmd "highlight Normal ctermbg=none guibg=none"
+-- vim.cmd [[highlight Normal ctermbg=none guibg=none]]
+vim.cmd [[highlight Normal ctermbg=none ]]
+vim.cmd [[highlight Normal guibg=none]]
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
+-- vim.cmd "set whichwrap+=<,>,[,],h,l"
 

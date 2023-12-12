@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
     use "rafi/awesome-vim-colorschemes"
     use "lunarvim/colorschemes"
     use "lunarvim/darkplus.nvim" -- color schemes
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- lua line 
     use {
@@ -123,6 +124,16 @@ return require('packer').startup(function(use)
         "nvim-treesitter/nvim-treesitter-textobjects",
         after = "nvim-treesitter",
         requires = "nvim-treesitter/nvim-treesitter",
+    })
+
+    -- Nvim transparent background.
+    -- :TransparentEnable
+    use { "xiyaowong/transparent.nvim" }
+
+    -- markdown-preview in browser.
+    use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
     })
 
 

@@ -32,7 +32,7 @@ keymap('n', '<C-l>', '<C-w>l', opts)
 
 -- toggle last search
 keymap('n', '<leader>v', ':set hlsearch!<CR>', opts)
-keymap('n', '<leader>bv', ':let @/ = ""<CR>', opts)
+-- keymap('n', '<leader>bv', ':let @/ = ""<CR>', opts)
 
 
 -- Spliting window
@@ -54,8 +54,8 @@ keymap('n', '<leader>q', ':bdelete<CR>', opts)
 -- delta: 2 lines
 keymap('n', '<C-Up>', ':resize -2<CR>', opts)
 keymap('n', '<C-Down>', ':resize +2<CR>', opts)
-keymap('n', '<C-Left>', ':vertical resize -2<CR>', opts)
-keymap('n', '<C-Right>', ':vertical resize +2<CR>', opts)
+keymap('n', '<C-Left>', ':vertical resize +2<CR>', opts)
+keymap('n', '<C-Right>', ':vertical resize -2<CR>', opts)
 
 --telescope
 local builtin = require('telescope.builtin')
@@ -85,17 +85,17 @@ keymap('n', '<leader>rr', ':%s///gc<left><left><left><left>', term_opts)
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+-- keymap("v", "p", '"_dP', opts)
 
 -- Hint: start visual mode with the same area as the previous area and the same mode
-keymap('v', '<', '<gv', opts)
-keymap('v', '>', '>gv', opts)
+-- keymap('v', '<', '<gv', opts)
+-- keymap('v', '>', '>gv', opts)
 
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+-- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+-- keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+-- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+-- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- ufo for code foding
 vim.keymap.set('n', '<leader>fo', require('ufo').openAllFolds)
@@ -110,3 +110,9 @@ vim.keymap.set('n', '<leader>fd', require('ufo').closeAllFolds)
 --         vim.lsp.buf.hover()
 --     end
 -- end)
+--
+
+
+-- use ctrl+c to copy to system clipboard
+-- need xclip to be installed.
+keymap("v", '<C-c>', '"+y', opts)
