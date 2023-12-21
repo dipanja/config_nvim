@@ -116,3 +116,6 @@ vim.keymap.set('n', '<leader>fd', require('ufo').closeAllFolds)
 -- use ctrl+c to copy to system clipboard
 -- need xclip to be installed.
 keymap("v", '<C-c>', '"+y', opts)
+
+-- Markdowm preview toggle.
+keymap("n", '<leader>p', ":MarkdownPreviewToggle<CR>", opts)
