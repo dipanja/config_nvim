@@ -14,8 +14,8 @@ require('mason-lspconfig').setup({
     ensure_installed = { 
         -- 'pylsp',  
         'lua_ls', 
-        -- 'pyright', 
-        'jedi_language_server'
+        'pyright', 
+        -- 'jedi_language_server'
     },
 })
 
@@ -74,14 +74,14 @@ end
 -- })
 
 -- pyright setup
--- lspconfig.pyright.setup({
---     on_attach = on_attach,
--- })
+lspconfig.pyright.setup({
+    on_attach = on_attach,
+})
 
 -- jedi_language_server setup
-lspconfig.jedi_language_server.setup({
-    on_attach=on_attach
-})
+-- lspconfig.jedi_language_server.setup({
+--     on_attach=on_attach
+-- })
 
 -- auto format on save
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
