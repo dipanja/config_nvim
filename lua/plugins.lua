@@ -99,8 +99,9 @@ return require('packer').startup(function(use)
             'sharkdp/fd',
             } 
         }
-}
+    }
     use { 'nvim-telescope/telescope-media-files.nvim' }
+    use {'nvim-telescope/telescope-ui-select.nvim' }
 
 
     -- Treesitter
