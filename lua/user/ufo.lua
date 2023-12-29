@@ -24,9 +24,19 @@ require("ufo").setup({
         -- if you prefer treesitter provider rather than lsp,
         -- return ftMap[filetype] or {'treesitter', 'indent'}
         -- return ftMap[filetype]
-        return {'treesitter', 'indent'}
+        -- return {'treesitter', 'indent'}
+        return {'lsp', 'indent'}
 
         -- refer to ./doc/example.lua for detail
     end
 })
 
+
+vim.keymap.set('n', 'zk', function()
+    local winid = require('ufo').peekFoldedLinesUnderCursor()
+    if not winid then
+        -- choose one of coc.nvim and nvim lsp
+        -- vim.fn.CocActionAsync('definitionHover') -- coc.nvim
+        vim.lsp.buf.hover()
+    end
+end, {})
