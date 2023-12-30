@@ -137,6 +137,8 @@ return require('packer').startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    use{'tpope/vim-fugitive'}
+
 
     -- :TODO 
     ---------------------------------------
