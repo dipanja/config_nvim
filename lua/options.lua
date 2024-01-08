@@ -44,12 +44,21 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 
 
-
 -- vim.cmd "highlight Normal ctermbg=none guibg=none"
 -- vim.cmd "highlight Normal ctermbg=none guibg=none"
 -- vim.cmd [[highlight Normal ctermbg=none guibg=none]]
-vim.cmd [[highlight Normal ctermbg=none ]]
 vim.cmd [[highlight Normal guibg=none]]
+vim.cmd [[highlight Normal ctermbg=none ]]
+--
+-- highlight on yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+    callback=function()
+        vim.highlight.on_yank({
+            higroup='IncSearch',
+            timeout=300
+        })
+    end
+})
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 
