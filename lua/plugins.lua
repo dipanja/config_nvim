@@ -116,10 +116,10 @@ return require('packer').startup(function(use)
     -- vs-code like icons
     use{ "nvim-tree/nvim-web-devicons" }
 
-    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+    -- use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
     -- ufo for code folding
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
 
     use({
@@ -187,6 +187,19 @@ return require('packer').startup(function(use)
 	end,
     }
 
+
+
+    -- lazy.nvim
+    -- noice
+    use {
+        "MunifTanjim/nui.nvim",
+    }
+    use {
+        "rcarriga/nvim-notify",
+    }
+    use {
+        "folke/noice.nvim",
+    }
 
     -- :TODO 
     ---------------------------------------

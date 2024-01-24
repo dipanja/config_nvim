@@ -108,3 +108,20 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+-- define common options
+--telescope
+local opts = {
+    noremap = true,      -- non-recursive
+    silent = true,       -- do not show message
+}
+
+local term_opts = { silent =
+    false
+}
+
+local keymap = vim.api.nvim_set_keymap
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, opts )
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, opts)
+vim.keymap.set('n', '<leader>fb', builtin.buffers, opts )
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, opts)

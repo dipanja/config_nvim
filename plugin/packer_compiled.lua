@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["alpha-nvim"] = {
-    config = { "\27LJ\2\n)\0\0\1\0\1\0\2'\0\0\0L\0\2\0\30Haskell can suck mo' nads�\17\1\0\6\0\14\0\0266\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0025\2\a\0007\2\b\0003\2\t\0009\3\3\0019\3\n\3\18\4\2\0B\4\1\2=\4\5\0039\3\v\0019\3\v\3+\4\2\0=\4\f\0039\3\r\0009\5\v\1B\3\2\1K\0\1\0\nsetup\14noautocmd\topts\vfooter\0\v_Gopts\1\0\2\ahl\tType\rposition\vcenter\1\19\0\0L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       P                                                                     ~       ████ ██████           █████      ██                     z      ███████████             █████                             �\1      █████████ ███████████████████ ███   ███████████   �\1     █████████  ███    █████████████ █████ ██████████████   �\1    █████████ ██████████ █████████ █████ █████ ████ █████   �\1  ███████████ ███    ███ █████████ █████ █████ ████ █████  �\1 ██████  █████████████████████ ████ █████ █████ ████ ██████ L                                                                       L                                                                       L                                                                       \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\0" },
+    config = { "\27LJ\2\n)\0\0\1\0\1\0\2'\0\0\0L\0\2\0\30Haskell can suck mo' nads�\17\1\0\6\0\14\0\0266\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0025\2\a\0007\2\b\0003\2\t\0009\3\3\0019\3\n\3\18\4\2\0B\4\1\2=\4\5\0039\3\v\0019\3\v\3+\4\2\0=\4\f\0039\3\r\0009\5\v\1B\3\2\1K\0\1\0\nsetup\14noautocmd\topts\vfooter\0\v_Gopts\1\0\2\rposition\vcenter\ahl\tType\1\19\0\0L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       P                                                                     ~       ████ ██████           █████      ██                     z      ███████████             █████                             �\1      █████████ ███████████████████ ███   ███████████   �\1     █████████  ███    █████████████ █████ ██████████████   �\1    █████████ ██████████ █████████ █████ █████ ████ █████   �\1  ███████████ ███    ███ █████████ █████ █████ ████ █████  �\1 ██████  █████████████████████ ████ █████ █████ ████ ██████ L                                                                       L                                                                       L                                                                       \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\0" },
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
@@ -94,11 +94,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes",
     url = "https://github.com/rafi/awesome-vim-colorschemes"
-  },
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
   },
   catppuccin = {
     loaded = true,
@@ -197,13 +192,23 @@ _G.packer_plugins = {
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
     url = "https://github.com/tamago324/nlsp-settings.nvim"
   },
+  ["noice.nvim"] = {
+    loaded = true,
+    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
   ["none-ls.nvim"] = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
     url = "https://github.com/nvimtools/none-ls.nvim"
   },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
-    after = { "cmp-buffer", "cmp-cmdline", "cmp-path", "cmp-nvim-lsp" },
+    after = { "cmp-buffer", "cmp-nvim-lsp", "cmp-path", "cmp-cmdline" },
     config = { "require('config.nvim-cmp')" },
     loaded = true,
     only_config = true,
@@ -219,6 +224,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -237,11 +247,6 @@ _G.packer_plugins = {
     path = "/home/bappa/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
-  ["nvim-ufo"] = {
-    loaded = true,
-    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/nvim-ufo",
-    url = "https://github.com/kevinhwang91/nvim-ufo"
-  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -256,11 +261,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bappa/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["promise-async"] = {
-    loaded = true,
-    path = "/home/bappa/.local/share/nvim/site/pack/packer/start/promise-async",
-    url = "https://github.com/kevinhwang91/promise-async"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
@@ -315,22 +315,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n)\0\0\1\0\1\0\2'\0\0\0L\0\2\0\30Haskell can suck mo' nads�\17\1\0\6\0\14\0\0266\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0025\2\a\0007\2\b\0003\2\t\0009\3\3\0019\3\n\3\18\4\2\0B\4\1\2=\4\5\0039\3\v\0019\3\v\3+\4\2\0=\4\f\0039\3\r\0009\5\v\1B\3\2\1K\0\1\0\nsetup\14noautocmd\topts\vfooter\0\v_Gopts\1\0\2\ahl\tType\rposition\vcenter\1\19\0\0L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       P                                                                     ~       ████ ██████           █████      ██                     z      ███████████             █████                             �\1      █████████ ███████████████████ ███   ███████████   �\1     █████████  ███    █████████████ █████ ██████████████   �\1    █████████ ██████████ █████████ █████ █████ ████ █████   �\1  ███████████ ███    ███ █████████ █████ █████ ████ █████  �\1 ██████  █████████████████████ ████ █████ █████ ████ ██████ L                                                                       L                                                                       L                                                                       \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 require('config.nvim-cmp')
 time([[Config for nvim-cmp]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n)\0\0\1\0\1\0\2'\0\0\0L\0\2\0\30Haskell can suck mo' nads�\17\1\0\6\0\14\0\0266\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0019\2\4\0025\3\6\0=\3\5\0025\2\a\0007\2\b\0003\2\t\0009\3\3\0019\3\n\3\18\4\2\0B\4\1\2=\4\5\0039\3\v\0019\3\v\3+\4\2\0=\4\f\0039\3\r\0009\5\v\1B\3\2\1K\0\1\0\nsetup\14noautocmd\topts\vfooter\0\v_Gopts\1\0\2\rposition\vcenter\ahl\tType\1\19\0\0L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       L                                                                       P                                                                     ~       ████ ██████           █████      ██                     z      ███████████             █████                             �\1      █████████ ███████████████████ ███   ███████████   �\1     █████████  ███    █████████████ █████ ██████████████   �\1    █████████ ██████████ █████████ █████ █████ ████ █████   �\1  ███████████ ███    ███ █████████ █████ █████ ████ █████  �\1 ██████  █████████████████████ ████ █████ █████ ████ ██████ L                                                                       L                                                                       L                                                                       \bval\vheader\fsection\27alpha.themes.dashboard\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
-vim.cmd [[ packadd cmp-cmdline ]]
-vim.cmd [[ packadd cmp-nvim-lsp ]]
-vim.cmd [[ packadd cmp-buffer ]]
-vim.cmd [[ packadd cmp-path ]]
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-treesitter-textobjects ]]
+vim.cmd [[ packadd cmp-buffer ]]
+vim.cmd [[ packadd cmp-cmdline ]]
+vim.cmd [[ packadd cmp-path ]]
+vim.cmd [[ packadd cmp-nvim-lsp ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
