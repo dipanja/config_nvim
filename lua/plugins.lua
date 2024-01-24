@@ -86,7 +86,7 @@ return require('packer').startup(function(use)
     -- LSP
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
     use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-    use { "nvimtools/none-ls.nvim" } -- for formatters and linters
+    use { "nvimtools/none-ls.nvim" } -- for formatters and linters fork of null-ls
     -- use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
     use 'nvim-lua/completion-nvim' 
 

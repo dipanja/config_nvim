@@ -1,5 +1,5 @@
--- local colorscheme = "catppuuccin"
 local colorscheme = "darkplus"
+-- local colorscheme = "catppuuccin"
 -- local colorscheme = "gruvbox"
 
 
