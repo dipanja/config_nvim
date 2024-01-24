@@ -63,6 +63,9 @@ keymap('n', '<leader>rr', ':%s///gc<left><left><left><left>', term_opts)
 -- To preview Markdown files in browser
 -- Markdowm preview toggle.
 keymap("n", '<leader>p', ":MarkdownPreviewToggle<CR>", opts)
+
+-- fugitive keymap
+keymap('n', '<leader>g', ':Git<CR>', opts)
 -----------------
 -- Visual mode --
 -----------------
