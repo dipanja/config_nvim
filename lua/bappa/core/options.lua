@@ -42,11 +42,8 @@ opt.scrolloff = 12
 
 -- terminal GUI colors
 opt.termguicolors = true -- enabl 24-bit RGB color in the TUI
+opt.cursorline = true -- enable coursorline
 
 -- split window options.
 opt.splitbelow = true -- open new vertical split bottom
 opt.splitright = true -- open new horizontal splits right
-
--- opt.showmode = true             -- we are experienced, wo don't need the "-- INSERT --" mode hint
--- vim.cmd "set cc=80"                 -- set colorcolumn at 80.
--- -- vim.opt.background = false
