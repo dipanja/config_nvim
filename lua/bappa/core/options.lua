@@ -22,9 +22,9 @@ opt.mouse = "a" -- allow the mouse to be used in Nvim
 opt.guifont = "monospace:h19" -- the font used in graphical neovim applications
 
 -- Tab
-opt.tabstop = 4 -- number of visual spaces per TAB
-opt.softtabstop = 4 -- number of spacesin tab when editing
-opt.shiftwidth = 4 -- insert 4 spaces on a tab
+opt.tabstop = 2 -- number of visual spaces per TAB
+opt.softtabstop = 2 -- number of spacesin tab when editing
+opt.shiftwidth = 2 -- insert 4 spaces on a tab
 opt.expandtab = true -- tabs are spaces, mainly because of python
 
 -- UI config
