@@ -47,3 +47,7 @@ keymap.set("n", "<A-k>", "<Esc><cmd>m .-2<CR>", { desc = "Move current line 1 do
 
 -- replace text
 keymap.set("n", "<leader>rr", ":%s///gc<left><left><left><left>", { desc = "Replace the text" })
+
+-- Map a key to toggle hlsearch
+-- toggle_highlight function is defined on lua/bappa/core/init.lua file.
+keymap.set("n", "<Leader>v", ":lua toggle_highlight()<CR>", { desc = "Toggle heighlight on search" })
