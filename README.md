@@ -1,5 +1,9 @@
 # Config for nvim
 
-used lazy as package manager.
+### package manager
 
-repo transfered from GitLab to GitHub.
+    used lazy as package manager.
+
+### Git repo
+
+    repo transfered from GitLab to GitHub.
