@@ -10,7 +10,7 @@ return {
 			transparent = true, -- set transparent background
 			styles = {
 				sidebars = "transparent", -- set transparent sidebars
-				floats = "transparent",
+				floats = "moon",
 				comments = { italic = true },
 				keyworgs = { italic = true },
 			},
