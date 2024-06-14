@@ -47,8 +47,9 @@ return {
 				"isort", -- python formatter
 				"black", -- python formatter
 				-- "pylint",
-				"flake8", -- python formatter
-				"eslint_d",
+				"pyproject-flake8", -- python linter
+				"eslint_d", -- linter
+				"pydocstyle", -- python linter
 			},
 		})
 	end,
