@@ -49,6 +49,7 @@ return {
 				-- "pylint",
 				"pyproject-flake8", -- python linter
 				"eslint_d", -- linter
+				"eslint", -- linter
 				"pydocstyle", -- python linter
 			},
 		})
