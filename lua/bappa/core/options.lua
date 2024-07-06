@@ -38,7 +38,7 @@ opt.ignorecase = true -- ignore case in searches by default
 opt.smartcase = true -- but make it case sensitive if an uppercase is entered
 
 -- Scrolling
-opt.scrolloff = 12
+opt.scrolloff = 6
 
 -- terminal GUI colors
 opt.termguicolors = true -- enabl 24-bit RGB color in the TUI
