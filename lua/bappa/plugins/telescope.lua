@@ -52,6 +52,9 @@ return {
 						["<C-v>"] = actions.select_vertical,
 						["<C-t>"] = actions.select_tab,
 
+						["d"] = actions.delete_buffer,
+						["q"] = actions.close,
+
 						["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
 						["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
 						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
@@ -93,7 +96,7 @@ return {
 			"n",
 			"<leader>fb",
 			"<cmd>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<cr>",
-			{ desc = "Find in buffer" }
+			{ desc = "Find open files in buffer" }
 		)
 		keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Telescope help" })
 	end,
