@@ -88,7 +88,13 @@ return {
 		keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Fuzzy find files in cwd" })
 		keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Fuzzy find recent files" })
 		keymap.set("n", "<leader>fs", builtin.grep_string, { desc = "Find string in cwd" })
-		keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find in buffer" })
+		-- keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find in buffer" })
+		keymap.set(
+			"n",
+			"<leader>fb",
+			"<cmd>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<cr>",
+			{ desc = "Find in buffer" }
+		)
 		keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find Telescope help" })
 	end,
 }
