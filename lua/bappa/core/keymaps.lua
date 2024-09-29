@@ -51,3 +51,8 @@ keymap.set("n", "<leader>rr", ":%s///gc<left><left><left><left>", { desc = "Repl
 -- Map a key to toggle hlsearch
 -- toggle_highlight function is defined on lua/bappa/core/init.lua file.
 keymap.set("n", "<Leader>v", ":lua toggle_highlight()<CR>", { desc = "Toggle heighlight on search" })
+
+--Terminal keymaps
+--Close the terminal
+keymap.set("t", "<leader><ESC>", "<C-\\><C-n>", { desc = "close the terminal" }, { noremap = true })
+keymap.set("n", "<leader>tsv", ":terminal<CR>", { desc = "open the terminal" }, { noremap = true })
