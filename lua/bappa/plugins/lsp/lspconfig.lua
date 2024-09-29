@@ -3,8 +3,18 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
-		{ "antosha417/nvim-lsp-file-operations", config = true },
-		{ "folke/neodev.nvim", opts = {} },
+		-- { "antosha417/nvim-lsp-file-operations", config = true },
+		-- { "folke/neodev.nvim", opts = {} },
+		{
+			"antosha417/nvim-lsp-file-operations",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+				"nvim-tree/nvim-tree.lua",
+			},
+			config = function()
+				require("lsp-file-operations").setup()
+			end,
+		},
 	},
 	config = function()
 		-- import lspconfig plugin
