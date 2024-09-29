@@ -42,8 +42,12 @@ keymap.set("n", "<leader>qq", "<cmd>qa<CR>", { desc = "Quit without saving" })
 -- keymap.set('n', '<leader>q', '<C-w>q', {desc = "Quit"})
 
 -- Move text up and down
-keymap.set("n", "<A-j>", "<Esc><cmd>m .+1<CR>", { desc = "Move current line 1 up" })
-keymap.set("n", "<A-k>", "<Esc><cmd>m .-2<CR>", { desc = "Move current line 1 down" })
+-- normal mode
+keymap.set("n", "<A-j>", "<cmd>m .+1<CR>", { desc = "Move current line 1 up" })
+keymap.set("n", "<A-k>", "<cmd>m .-2<CR>", { desc = "Move current line 1 down" })
+-- visual mode
+keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move current line 1 up" })
+keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move current line 1 down" })
 
 -- replace text
 keymap.set("n", "<leader>rr", ":%s///gc<left><left><left><left>", { desc = "Replace the text" })
