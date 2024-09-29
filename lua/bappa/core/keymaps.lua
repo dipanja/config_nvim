@@ -59,4 +59,9 @@ keymap.set("n", "<Leader>v", ":lua toggle_highlight()<CR>", { desc = "Toggle hei
 --Terminal keymaps
 --Close the terminal
 keymap.set("t", "<leader><ESC>", "<C-\\><C-n>", { desc = "close the terminal" }, { noremap = true })
-keymap.set("n", "<leader>tsv", ":terminal<CR>", { desc = "open the terminal" }, { noremap = true })
+--open terminal
+keymap.set("n", "<leader>tt", ":terminal<CR>", { desc = "open the terminal" }, { noremap = true })
+
+--scrolling
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "scroll up and center" })
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "scroll down and center" })
