@@ -15,7 +15,20 @@ return {
 				require("lsp-file-operations").setup()
 			end,
 		},
+		{
+			"ray-x/lsp_signature.nvim", -- add this line
+			config = function()
+				require("lsp_signature").setup({
+					bind = true, -- This is mandatory, otherwise border config won't get registered.
+					handler_opts = {
+						border = "rounded", -- optional, can set to "single", "double", etc.
+					},
+					floating_window = true, -- show hint in a floating window, set to false for virtual text only
+				})
+			end,
+		},
 	},
+
 	config = function()
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
@@ -74,6 +87,14 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+				-- Show signature help
+				opts.desc = "Show signature help"
+				keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+				opts.desc = "Show signature help"
+				keymap.set("n", "<C-k>", function()
+					require("lsp_signature").toggle_float_win()
+				end, opts)
 			end,
 		})
 
@@ -88,11 +109,24 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		-- Function to trigger signature help
+		local on_attach = function(client, bufnr)
+			local opts = { buffer = bufnr, silent = true }
+			-- Automaticallly show signature help using lsp_signature
+			require("lsp_signature").on_attach({
+
+				bind = true,
+				handler_opts = { border = "rounded" },
+				floating_window = true,
+			}, bufnr)
+		end
+
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
+					on_attach = on_attach,
 				})
 			end,
 			-- ["svelte"] = function()
