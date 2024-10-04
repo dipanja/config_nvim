@@ -89,12 +89,12 @@ return {
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
 				-- Show signature help
-				opts.desc = "Show signature help"
-				keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
-				opts.desc = "Show signature help"
-				keymap.set("n", "<C-k>", function()
-					require("lsp_signature").toggle_float_win()
-				end, opts)
+				-- opts.desc = "Show signature help"
+				-- keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+				-- opts.desc = "Show signature help"
+				-- keymap.set("n", "<C-k>", function()
+				-- 	require("lsp_signature").toggle_float_win()
+				-- end, opts)
 			end,
 		})
 
