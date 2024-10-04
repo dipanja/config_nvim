@@ -5,6 +5,7 @@ return {
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
 		"hrsh7th/cmp-cmdline", -- cmd auto-completion
+		-- "hrsh7th/cmp-nvim-lsp-signature-help", -- display function signatures
 		{
 			"L3MON4D3/LuaSnip",
 			-- follow latest release.
@@ -49,6 +50,7 @@ return {
 			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
+				-- { name = "nvim_lsp_signature_help" }, -- add signature help source
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
